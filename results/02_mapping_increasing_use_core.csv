@@ -1,0 +1,15 @@
+paper,venue,month,file,sentence_count,estimated_alpha
+Mapping the Increasing Use of LLMs in Scientific Papers,CS,2022_11,inference_data/arxiv/CS/2022_11.parquet,15619,0.02329924939036409
+Mapping the Increasing Use of LLMs in Scientific Papers,CS,2024_2,inference_data/arxiv/CS/2024_2.parquet,15603,0.17502185847402724
+Mapping the Increasing Use of LLMs in Scientific Papers,EESS,2022_11,inference_data/arxiv/EESS/2022_11.parquet,5841,0.029192540717854862
+Mapping the Increasing Use of LLMs in Scientific Papers,EESS,2024_2,inference_data/arxiv/EESS/2024_2.parquet,7668,0.1442807328134919
+Mapping the Increasing Use of LLMs in Scientific Papers,Math,2022_11,inference_data/arxiv/Math/2022_11.parquet,10971,0.024332579846723296
+Mapping the Increasing Use of LLMs in Scientific Papers,Math,2024_2,inference_data/arxiv/Math/2024_2.parquet,11276,0.049321938120387446
+Mapping the Increasing Use of LLMs in Scientific Papers,Phys,2022_11,inference_data/arxiv/Phys/2022_11.parquet,14222,0.02626554559506971
+Mapping the Increasing Use of LLMs in Scientific Papers,Phys,2024_2,inference_data/arxiv/Phys/2024_2.parquet,14627,0.06650331939856946
+Mapping the Increasing Use of LLMs in Scientific Papers,Stat,2022_11,inference_data/arxiv/Stat/2022_11.parquet,3056,0.029064573494834434
+Mapping the Increasing Use of LLMs in Scientific Papers,Stat,2024_2,inference_data/arxiv/Stat/2024_2.parquet,3669,0.0914975847480122
+Mapping the Increasing Use of LLMs in Scientific Papers,bioRxiv,2022_11,official_data/inference_data/biorxiv/2022_11.parquet,20117,0.028167399513841604
+Mapping the Increasing Use of LLMs in Scientific Papers,bioRxiv,2024_2,official_data/inference_data/biorxiv/2024_2.parquet,20578,0.08769082671472372
+Mapping the Increasing Use of LLMs in Scientific Papers,Nature,2022_11,official_data/inference_data/nature/2022_11.parquet,8413,0.03415557725208764
+Mapping the Increasing Use of LLMs in Scientific Papers,Nature,2024_2,official_data/inference_data/nature/2024_2.parquet,9234,0.06779900613697729

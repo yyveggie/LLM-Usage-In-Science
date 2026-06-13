@@ -1,0 +1,18 @@
+paper,section,model,term,coefficient,standard_error
+AI-Assisted Writing,distributional_validation,known_alpha,alpha=0.000,5.323659561633471e-15,5.323659561633471e-15
+AI-Assisted Writing,distributional_validation,known_alpha,alpha=0.100,0.0890608456539882,0.010939154346011809
+AI-Assisted Writing,distributional_validation,known_alpha,alpha=0.200,0.19142362603384666,0.00857637396615335
+AI-Assisted Writing,did_ddd_demo,DiD,intercept,0.04571594223334191,0.0007308627247249635
+AI-Assisted Writing,did_ddd_demo,DiD,non_english,0.009812398753614863,0.0010142979986185454
+AI-Assisted Writing,did_ddd_demo,DiD,post_gpt,0.038567156594875335,0.0010909900781438003
+AI-Assisted Writing,did_ddd_demo,DiD,non_english:post_gpt,0.037478565563227824,0.001443819723279423
+AI-Assisted Writing,did_ddd_demo,DiD,ai_experience:post_gpt,0.011992913970714432,0.001260854673966992
+AI-Assisted Writing,did_ddd_demo,DDD,intercept,0.044298687834360854,0.0009569608574550312
+AI-Assisted Writing,did_ddd_demo,DDD,non_english,0.012276333989644644,0.0013326840232570113
+AI-Assisted Writing,did_ddd_demo,DDD,post_gpt,0.031089256583306524,0.001369138377682908
+AI-Assisted Writing,did_ddd_demo,DDD,less_established,0.0023600631193332645,0.0012349008128368561
+AI-Assisted Writing,did_ddd_demo,DDD,non_english:post_gpt,0.027551951317274875,0.0018592295337714244
+AI-Assisted Writing,did_ddd_demo,DDD,less_established:post_gpt,0.013388241628127552,0.001765610743154645
+AI-Assisted Writing,did_ddd_demo,DDD,non_english:less_established,-0.004086674421394118,0.0017158354104408352
+AI-Assisted Writing,did_ddd_demo,DDD,non_english:less_established:post_gpt,0.0162738533423806,0.0024271066820518434
+AI-Assisted Writing,did_ddd_demo,DDD,ai_experience:post_gpt,0.012461448159051449,0.0010442920407337391

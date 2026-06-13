@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "llm-usage-in-science"
+version = "0.1.0"
+description = "Reproduction of the distributional LLM-usage method for scientific writing, with a pluggable generation-LLM experiment."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "pandas",
+    "pyarrow",
+    "numpy",
+    "scipy",
+]
+
+[project.optional-dependencies]
+# Needed only for the swap-the-generation-LLM experiment (live API calls).
+llm-swap = [
+    "openai>=1.0.0",
+    "PyYAML>=6.0",
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
