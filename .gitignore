@@ -22,6 +22,16 @@ results/swapped_distribution/
 # Copyrighted paper PDFs (do not redistribute; remove this line if you have rights)
 paper/
 
+# Local paper draft (do not upload)
+paper.tex
+# LaTeX build artifacts
+*.aux
+*.log
+*.out
+*.bbl
+*.blg
+*.synctex.gz
+
 # API keys / secrets
 .env
 *.env
