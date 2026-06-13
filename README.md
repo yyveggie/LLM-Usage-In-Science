@@ -26,6 +26,7 @@
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -e ".[llm-swap]"     # 只跑复现可用 pip install -e .
+python -m spacy download en_core_web_sm   # 换 LLM 实验的分词对齐需要
 ```
 
 安装后所有脚本以模块方式运行（包：`core` / `reproduction` / `llm_swap` / `data_tools`）。
@@ -97,3 +98,11 @@ python -m reproduction.official_cs_validation \
 ```
 
 输出的 `q_t` 与官方 schema 一致（`Word/logP/logQ/log1-P/log1-Q`），可无缝接入 `run_02/03` 与官方验证脚本。
+
+**分词对齐**：`q_t` 的准确性依赖 AI 语料分词与官方词表一致。`build_ai_corpus` 默认用 spaCy（`--tokenizer spacy`，对齐官方），跑前可先核验重合度：
+
+```bash
+python -m data_tools.inspect_official_vocab --venue CS --source jsonl --input data/human_corpus/arxiv_cs.jsonl
+```
+
+选重合度更高的分词器；并用第 6 步的官方已知-α 验证（误差应 ≤3.5%）确认对齐是否到位。

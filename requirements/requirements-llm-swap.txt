@@ -2,3 +2,6 @@
 # Install on top of requirements-official.txt (pandas, pyarrow, numpy, scipy).
 openai>=1.0.0
 PyYAML>=6.0
+# spaCy + the small English model align AI-corpus tokenization with the
+# official vocabulary (run: python -m spacy download en_core_web_sm)
+spacy>=3.5

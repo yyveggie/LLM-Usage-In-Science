@@ -24,8 +24,8 @@ from pathlib import Path
 
 import pandas as pd
 
-from core.distributional_llm_reproduction import tokenize
 from core.paths import RESULTS
+from core.tokenization import TOKENIZER_CHOICES, Tokenizer, get_tokenizer
 from llm_swap.human_corpus import add_source_arguments, load_human_paragraphs
 from llm_swap.llm_models import DEFAULT_CONFIG, LLMClient, get_model_config
 
@@ -49,6 +49,7 @@ def generate_ai_sentences(
     *,
     strategy: str,
     min_tokens: int,
+    tokenizer: Tokenizer,
 ) -> list[dict[str, object]]:
     rows: list[dict[str, object]] = []
     for index, paragraph in enumerate(paragraphs):
@@ -59,7 +60,7 @@ def generate_ai_sentences(
             continue
 
         for sentence in split_sentences(ai_text):
-            tokens = tokenize(sentence)
+            tokens = tokenizer(sentence)
             if len(tokens) >= min_tokens:
                 rows.append({"inference_sentence": tokens, "source_paragraph": index})
 
@@ -87,6 +88,12 @@ def parse_args() -> argparse.Namespace:
         help="Drop generated sentences shorter than this many tokens.",
     )
     parser.add_argument(
+        "--tokenizer",
+        choices=TOKENIZER_CHOICES,
+        default="spacy",
+        help="Tokenizer for AI sentences. 'spacy' matches the official vocabulary.",
+    )
+    parser.add_argument(
         "--output",
         type=Path,
         default=None,
@@ -110,6 +117,7 @@ def main() -> None:
         paragraphs,
         strategy=args.strategy,
         min_tokens=args.min_tokens,
+        tokenizer=get_tokenizer(args.tokenizer),
     )
     if not rows:
         raise SystemExit("No AI sentences generated; nothing to save.")

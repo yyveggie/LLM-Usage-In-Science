@@ -20,6 +20,7 @@ dependencies = [
 llm-swap = [
     "openai>=1.0.0",
     "PyYAML>=6.0",
+    "spacy>=3.5",
 ]
 
 [tool.setuptools]
